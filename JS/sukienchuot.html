@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su kien chuot</title>
+</head>
+<body>
+    <img style="height: 70px; width: 70px;" id="bong" src="https://cf.shopee.vn/file/116e3346b7d34d3aee1bd015bf555cb3" />
+    <p>Click button below to move the image to right or left</p>
+    <input type="button" id="bong" value="Click Right" onclick="moveRight();">
+    <input type="button" id="bong" value="Click Left" onclick="moveLeft();">
+</body>
+<script>
+    let img0bj = null;
+    img0bj=document.getElementById("bong");
+    function init(){
+        imgObj = document.getElementById('bong');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '500px';
+    }
+    function moveRight() {
+    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    function moveLeft() {
+    imgObj.style.left = parseInt(imgObj.style.left) + -10 + 'px';
+    }
+    window.onload = init;
+</script>
+</html>
