@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let dtb = +prompt("Nhap diem di nao: ");
+        switch (true) {
+            case (dtb >= 9 && dtb <= 10):
+                document.write("Xuat sac!!!");
+                break;
+            case (dtb >= 8 && dtb < 9):
+                document.write("Gioi!!!");
+                break;
+            case (dtb >= 7 && dtb < 8):
+                document.write("Kha!!!");
+                break;
+            case (dtb >= 5 && dtb < 7):
+                document.write("Trung binh!!!");
+                break;
+            case (dtb < 5 && dtb >= 0):
+                document.write("Yeu!!!");
+                break;
+            default:
+                document.write("Nhap lai diem");
+
+        }
+    </script>
+</body>
+
+</html>

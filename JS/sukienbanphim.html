@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Su kien ban phim</title>
 </head>
+
 <body onload="docReady()">
-    <img id="Chaien" style="position:absolute;left:0; top:0;" height="100" width="80" src="https://i.pinimg.com/736x/bb/a1/c5/bba1c5f2cf01a9fcf68a75adb307ec6b.jpg" >
+    <img src="https://i.ytimg.com/vi/_HurACn_Vbg/hqdefault.jpg" id="Chaien" style="position:absolute;left:0; top:0;" height="200" width="200">
+
 </body>
 <script>
     function up() {
-        let element= document.getElementById("Chaien");
-        element.style.top=parseInt(element.style.top) - 5 + "px";
+        let element = document.getElementById("Chaien");
+        element.style.top = parseInt(element.style.top) - 5 + "px";
     }
     function down() {
-        let element= document.getElementById("Chaien");
-        element.style.top=parseInt(element.style.top) + 5 + "px";
-    } 
+        let element = document.getElementById("Chaien");
+        element.style.top = parseInt(element.style.top) + 5 + "px";
+    }
     function right() {
-        let element= document.getElementById("Chaien");
-        element.style.left=parseInt(element.style.left) + 5 + "px";
+        let element = document.getElementById("Chaien");
+        element.style.left = parseInt(element.style.left) + 5 + "px";
     }
     function left() {
-        let element= document.getElementById("Chaien");
-        element.style.left=parseInt(element.style.left) - 5 + "px";
+        let element = document.getElementById("Chaien");
+        element.style.left = parseInt(element.style.left) - 5 + "px";
     }
     function moveselection(evt) {
         ///console.log(evt);
-        switch (evt.keyCode){
+        switch (evt.keyCode) {
             case 37:
                 left();
                 break;
@@ -44,9 +47,9 @@
         }
     }
     function docReady() {
-        //window.addEventListener("keydown", moveselection());
         window.addEventListener('keydown', moveselection);
     }
 </script>
 </script>
-</html> 
+
+</html>
