@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age=Number(prompt("Nhap tuoi: "));
+        switch (true){
+            case (age>0&&age<=2):
+                console.log("tre so sinh");
+                break;
+            case (age>2&&age<=10):
+                console.log("nhi dong");
+                break;
+            case (age>10&&age<=17):
+                console.log("vi thanh nien");
+                break;
+            case (age>17&&age<=39):
+                console.log("thanh nien");
+                break;
+            case (age>39&&age<=50):
+                console.log("trung niem");
+                break;
+            case (age>50):
+                console.log("cao niem");
+                break;
+            default: console.log("Nhap lai tuoi");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dtb=+prompt("nhap diem trung binh: ");
+        if (dtb>=9&&dtb<=10){
+            console.log("Xuat sac");
+        }
+        if (dtb>=8&&dtb<9){
+            console.log("Gioi");
+        }
+        if (dtb>=7&&dtb<8){
+            console.log("Kha");
+        }
+        if (dtb>=5&&dtb<7){
+            console.log("TB");
+        }
+        if (dtb<5&&dtb>=0){
+            console.log("YEU");
+        }
+        if (dtb<0||dtb>10){
+            console.log("Nhap lai diem");
+        }
+    </script>
+</body>
+</html>

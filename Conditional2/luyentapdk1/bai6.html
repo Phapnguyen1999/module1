@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sales=+prompt("Nhap doanh so: ");
+        if (sales>1000000000){
+            console.log("Hoa hong nhan duoc: "+sales*0.03);
+        }
+        else {
+            if (sales>500000000){
+                console.log("Hoa hong nhan duoc la: "+sales*0.02);
+            }
+            else {
+                if (sales>100000000){
+                    console.log("Hoa hong nhan duoc la: "+sales*0.01);
+                }
+                else {
+                    console.log("Khong co hoa hong");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

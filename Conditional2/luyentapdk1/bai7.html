@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let time=+prompt("Nhap thoi gian goi(s): ");
+        if (time<=300&&time>0){
+            console.log("Cuoc dien thoai la: "+(time/60)*1500+" dong");
+        }
+        else {
+            if (time<=600) {
+                console.log("Cuoc dien thoai la: "+(time/60)*1100+" dong");
+            }
+            else {
+                console.log("Cuoc dien thoai la: "+(time/60)*800+" dong");
+            }
+        }
+    </script>
+</body>
+</html>
