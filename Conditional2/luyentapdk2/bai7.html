@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giai phuong trinh bac 2</title>
+</head>
+
+<body>
+    <script>
+        let a = Number(prompt("Enter a: "));
+        let b = Number(prompt("Enter b: "));
+        let c = Number(prompt("Enter c: "));
+        let denta = b * b - 4 * a * c;
+        let x, x1, x2;
+        console.log(denta);
+        if (denta > 0) {
+            x1 = (-b + Math.sqrt(denta)) / 2 * a;
+            x2 = (-b - Math.sqrt(denta)) / 2 * a;
+            console.log(`Phuong trinh co 2 nghiem: x1 = ${x1} x2 = ${x2}`);
+        }
+        else {
+            if (denta = 0) {
+                x = -b / 2 * a;
+                console.log(`Phuong trinh co 1 nghiem: x = ${x}`);
+            }
+            else {
+                console.log(`Phuong trinh vo nghiem`);
+            }
+        }
+    </script>
+</body>
+
+</html>
