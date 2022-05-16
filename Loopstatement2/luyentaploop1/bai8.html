@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramdom</title>
+</head>
+<body>
+    <button type="button" onclick="doanso()">Choi di nao!!!</button>
+    <script>
+        function doanso(){
+        let min=Number(prompt("Nhap min: "));
+        while (Number.isNaN(min)||min<0){
+            min=Number(prompt("Nhap lai min: "));
+        }
+        let max=Number(prompt("Nhap max: "));
+        while (Number.isNaN(max)||max<min){
+            max=Number(prompt("Nhap lai max: "));
+        }
+        let number=Number(prompt("Nhap so ban chon: "));
+        while (Number.isNaN(number)||number>max||number<min){
+            max=Number(prompt("Nhap lai so ban chon: "))
+        }
+        for(;;){
+            if (number!=Math.floor(Math.random()*(max-min+1)+min)){
+                max=Number(prompt("Nhap lai so ban chon: "));
+            }
+            else{
+                alert("Ban da chon dung!!!");
+                break;
+            }
+        }
+    }
+    </script>
+</body>
+</html>
