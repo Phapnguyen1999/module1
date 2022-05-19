@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dao cac phan tu trong mang</title>
 </head>
 <body>
     <script>
-        // let age=+prompt("Nhap tuoi");
-        // if (age>=16){
-        //     console.log("Du tuoi vao lop 10");
-        // }
-        // else {
-        //     console.log("Khong du tuoi vao lop 10");
-        // }
+        let x = [-3,5,1,3,2,10];
+        let a,b=x.length-1;
+        for (i=0;i<b;i++){
+            a=x[b];
+            x[b]=x[i];
+            x[i]=a;
+            b--;
+        }
+        document.write(x);
     </script>
 </body>
 </html>
