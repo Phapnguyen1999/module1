@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i,j,count=0;
+        let str1=prompt("Enter string 1: ");
+        let str2=prompt("Enter string 2: ");
+        for (i=0;i<str1.length;i++){
+            for (j=0;j<str2.length;j++){
+                if (str1[i]==str2[j]&&i==j){
+                    count++;
+                    break;
+                }
+            }
+        }
+    if (count==str1.length){
+        console.log("Hai chuoi giong nhau");
+    }
+    else{
+        console.log("Hai chuoi k giong nhau");
+    }
+    </script>
+</body>
+</html>

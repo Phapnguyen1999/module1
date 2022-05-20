@@ -14,44 +14,46 @@
         let index = [];
         let x = [-3, 5, 1, 3, 2, 10, 3];
         let number = +prompt("Nhap gia tri tim kiem: ");
-        // for (; ;) {
-        //     for (i = 0; i < x.length; i++) {
-        //         if (number == x[i]) {
-        //             count += 1;
-        //             index += i+";";
-        //         }
-        //     }
-        //     if (count >= 1) {
-        //         alert(`${number} co trong mang, vi tri so ${index}`);
-        //         break;
-        //     }
-        //     else {
-        //         number = +prompt('Nhap lai gia tri tim kiem:');
-        //     }
-        // }
+        for (; ;) {
+            for (i = 0; i < x.length; i++) {
+                if (number == x[i]) {
+                    count += 1;
+                    index += i+";";
+                }
+            }
+            if (count >= 1) {
+                alert(`${number} co trong mang, vi tri so ${index}`);
+                break;
+            }
+            else {
+                number = +prompt('Nhap lai gia tri tim kiem:');
+            }
+        }
+
         // for (i = 0; i < x.length; i++) {
         //     if (number == x[i]) {
         //         document.write(`${number} co trong mang, vi tri ${i} <br>`);
+        //         count++;
         //     }
         //     else {
-        //         if (i == x.length-1) {
+        //         if (i == x.length-1&&count==0) {
         //             document.write(`${number} k co trong mang`);
         //         }
         //     }
         // }
-        x.forEach(function (x) {
-            if (number == x) {
-                count += 1;
-                index += i+";";
-            }
-            i++;
-        })
-        if (count >= 1) {
-            document.write(`${number} co trong mang, vi tri  ${index}`);
-        }
-        else {
-            document.write(`${number} k co trong mang`);
-        }
+        // x.forEach(function (x) {
+        //     if (number == x) {
+        //         count += 1;
+        //         index += i+";";
+        //     }
+        //     i++;
+        // })
+        // if (count >= 1) {
+        //     document.write(`${number} co trong mang, vi tri  ${index}`);
+        // }
+        // else {
+        //     document.write(`${number} k co trong mang`);
+        // }
     </script>
 </body>
 

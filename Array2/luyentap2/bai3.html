@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let alphabet = ' ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        // let str = ["0","a","3","d","J"," ","G","4"];
+        let count =0,i;
+        let size=+prompt("Nhap size cua mang: ");
+        let a=[];
+        for (i=0;i<size;i++){
+            a[i]=prompt("Nhap ki tu: ");
+        }
+        for (i = 0; i < a.length; i++) {
+            if (alphabet.indexOf(a[i]) !== -1) {
+                count++;
+            }
+        }
+        console.log(a);
+        console.log(`So ki tu so la: ${a.length-count}`);
+    </script>
+</body>
+</html>

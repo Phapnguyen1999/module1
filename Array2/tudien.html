@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Từ điển Anh-Viet</title>
 </head>
+
 <body>
     <h3>Nhập từ: </h3>
     <input type="text" name="" id="string">
-    <button onclick="transcript()">Dịch</button>
+    <button style="width: 50px;" onclick="transA_V()">Dịch A->V</button>
+    <button style="width: 50px;" onclick="transV_A()">Dịch V->A</button>
     <p id="result"></p>
     <script>
-    function transcript() {
-    let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
-    let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
-    let string = document.getElementById("string").value;
-    let index_eng = 0;
-    let result = "";
-    for (let i = 0; i < arr_eng.length; i++) {
-        if (string == arr_eng[i]) {
-            index_eng = i;
-            for (let j = 0; j < arr_vie.length; j++) {
-                if (index_eng == j) { 
-                    result = arr_vie[j]; 
+        function transA_V() {
+            let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+            let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+            let string = document.getElementById("string").value;
+            let index_eng = 0, count = 0;
+            let result = "";
+            for (let i = 0; i < arr_eng.length; i++) {
+                if (string == arr_eng[i]) {
+                    index_eng = i;
+                    count++;
+                    for (let j = 0; j < arr_vie.length; j++) {
+                        if (index_eng == j) {
+                            result = arr_vie[j];
+                        }
+                    }
                 }
             }
+            if (count == 0) {
+            result = "Khong co trong tu dien";
+            }
+                document.getElementById("result").innerHTML = result;
         }
-    }
-    document.getElementById("result").innerHTML = result;
-}
+        function transV_A() {
+            let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+            let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+            let string = document.getElementById("string").value;
+            let index_eng = 0, count = 0;
+            let result = "";
+            for (let i = 0; i < arr_vie.length; i++) {
+                if (string == arr_vie[i]) {
+                    index_vie = i;
+                    count++;
+                    for (let j = 0; j < arr_eng.length; j++) {
+                        if (index_vie == j) {
+                            result = arr_eng[j];
+                        }
+                    }
+                }
+            }
+            if (count == 0) {
+                result = "Khong co trong tu dien";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
     </script>
 </body>
+
 </html>
