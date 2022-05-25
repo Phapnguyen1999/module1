@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function matrix(size, max, min) {
+            let arrays = [];
+            for (let i = 0; i < size; i++) {
+                arrays[i] = [];
+                for (let j = 0; j < size; j++) {
+                    arrays[i][j] = Math.floor((Math.random() * (max - min + 1) + min));
+                }
+            }
+            return arrays;
+        }
+        // console.log((matrix(3,10,1)));
+        function sumdiagonaldown(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array[i].length; j++) {
+                    if (i == j) {
+                        sum += array[i][j];
+                    }
+                }
+            }
+            return sum;
+        }
+        function sumdiagonalup(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array[i].length; j++) {
+                    if (i + j == array.length - 1) {
+                        sum += array[i][j];
+                    }
+                }
+            }
+            return sum;
+        }
+        function totalborderline(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array[i].length; j++) {
+                    if (i == 0 || i == array.length - 1 || j == 0 || j == array.length - 1) {
+                        sum += array[i][j];
+                    }
+                }
+            }
+            return sum;
+        }
+        function Primes(array) {
+            let sum = 0, countPrime = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array[i].length; j++) {
+                    count = 0;
+                    for (let k = 1; k <= array[i][j]; k++) {
+                        if (array[i][j] % k == 0) {
+                            count++;
+                        }
+                    }
+                    if (count == 2) {
+                        countPrime += 1;
+                    }
+                }
+            }
+            return countPrime;
+        }
+        function main() {
+            let result = matrix(5, 5, 1);
+            console.log(result);
+            console.log(sumdiagonaldown(result));
+            console.log(sumdiagonalup(result));
+            console.log(totalborderline(result));
+            console.log(Primes(result));
+        }
+    </script>
+</body>
+
+</html>

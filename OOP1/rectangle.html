@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP demo</title>
+</head>
+
+<body>
+    <script>
+        function Rectangle(length, width) {
+            this.length = length;
+            this.width = width;
+            this.areaRectangle = function () {
+                return this.length * this.width;
+            };
+            this.primeterRectangle = function () {
+                return (this.length + this.width) * 2;
+            };
+        }
+        let rectangle_1 = new Rectangle(10, 5);
+        console.log(rectangle_1.areaRectangle());
+        console.log(rectangle_1.primeterRectangle());
+        let rectangle_2 = new Rectangle(12, 5);
+        console.log(rectangle_2.areaRectangle());
+        console.log(rectangle_2.primeterRectangle());
+    </script>
+</body>
+
+</html>

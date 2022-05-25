@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rever(str) {
+            let array = str.split("");
+            let array1 = array.reverse();
+            let str1 = array1.join("");
+            // console.log(str);
+            // console.log(str1);   
+            if (str == str1) {
+                document.write("Day la chuoi doi xung");
+            }
+            else {
+                document.write("Day la chuoi k doi xung");
+            }
+        }
+        let string="rotor";
+        rever(string);
+
+    </script>
+</body>
+
+</html>

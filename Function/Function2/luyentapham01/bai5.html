@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let string1 = prompt("Nhap ten ngoi sao: ");
+        function star(string) {
+            let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", " Ursa Major", "Leo"];
+            let i, j, count = 0, index_1 = 0;
+            let result;
+            for (i = 0; i < arr1.length; i++) {
+                if (string == arr1[i]) {
+                    index_1 = i;
+                    count++
+                }
+                for (j = 0; j < arr2.length; j++) {
+                    if (index_1 == j) {
+                        result = arr2[j];
+                    }
+                }
+            }
+            if (count == 0) {
+                result = "Khong tim thay sao"
+            }
+            document.write(result);
+            return result;
+        }
+        star(string1);
+    </script>
+</body>
+
+</html>

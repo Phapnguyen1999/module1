@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <script>
+        function Circle(radius,color){
+            this.radius=radius;
+            this.color=color;
+            this.getRadius=function(){
+                return radius;
+            }
+            this.getColor=function(){
+                return color;
+            }
+            this.getArea=function(){
+                return this.radius**2*Math.PI;
+            }
+        }
+        let circle1=new Circle(5,"green");
+        console.log(`Area: ${circle1.getArea(5).toFixed(2)} color is ${circle1.getColor()}`);
+    </script>
+</body>
+</html>

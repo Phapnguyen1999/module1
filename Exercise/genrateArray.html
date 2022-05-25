@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function generateArray(size, min, max) {
+            let numbers = [];
+            for (let i = 0; i < size; i++) {
+                numbers[i] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            return numbers;
+        }
+        function even(array) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 0) {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        function sum(array) {
+            let total = 0;
+            for (let i = 0; i < array.length; i++) {
+                total += array[i];
+            }
+            return total;
+        }
+        function main() {
+            let arrays = generateArray(10, 20, 40);
+            document.write(`tong cac gia tri trong mang ${sum(arrays)} <br>`);
+            document.write(`so luong so chan trong mang ${even(arrays)}<br>`);
+            document.write(arrays);
+        }
+        main();
+    </script>
+</body>
+
+</html>

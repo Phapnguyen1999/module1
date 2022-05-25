@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Color</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        div{
+            width: 600px;
+            margin: 0px auto;
+        }
+        table,tr, td{
+            border-collapse: collapse;
+            /* border:1px solid black */
+        }
+        table>tbody>tr:first-child{
+            height: 100px;
+            font-size: 20px;
+        }
+        table>tbody>tr>td{
+            text-align: center;
+            padding: 10px 0px;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td id="result" colspan="4" style="background-color: rgba(255, 99, 71,0.5)">
+                    rgba(255, 99, 71, 0.5)
+                </td>
+            </tr>
+            <tr>
+                <td>RED</td>
+                <td>GREEN</td>
+                <td>BLUE</td>
+                <td>ALPHA</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="range" min="0" max="255" id="red" oninput="changeColor()">
+                </td>
+                <td>
+                    <input type="range" min="0" max="255" id="green" oninput="changeColor()">
+                </td>
+                <td>
+                    <input type="range" min="0" max="255" id="blue" oninput="changeColor()">
+                </td>
+                <td>
+                    <input type="range" min="0" max="255" id="alpha" oninput="changeColor()">
+                </td>
+            </tr>
+            <tr>
+                <td id="redvalue">255</td>
+                <td id="greenvalue">99</td>
+                <td id="bluevalue">71</td>
+                <td id="alphavalue">0.5</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function changeColor(){
+            let red=document.querySelector("#red").value;
+            let green=document.querySelector("#green").value;
+            let blue=document.querySelector("#blue").value;
+            let alpha=(Number(document.querySelector("#alpha").value)/100).toFixed(1);
+            let result = document.querySelector("#result");
+            let mix=`rgba(${red},${green},${blue},${alpha})`;
+            result.innerHTML=mix;
+            result.style.backgroundColor=mix;
+            let redvalue=document.querySelector("#redvalue");
+            let greenvalue=document.querySelector("#greenvalue");
+            let bluevalue=document.querySelector("#bluevalue");
+            let alphavalue=document.querySelector("#alphavalue");
+            redvalue.innerHTML=red;
+            greenvalue.innerHTML=green;
+            bluevalue.innerHTML=blue;
+            alphavalue.innerHTML=alpha;
+        }
+    </script>
+</body>
+</html>
